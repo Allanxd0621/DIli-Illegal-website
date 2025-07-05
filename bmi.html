@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Use Allan's free online BMI calculator to check your body mass index and track your health. Quick and mobile-friendly!" />
+<meta name="keywords" content="BMI Calculator, Body Mass Index, Allan BMI, Free BMI Tool, Health Calculator, Weight Checker, BMI Philippines, BMI online, BMI for students" />
+<meta name="author" content="Allan Manalo" />
+
+  <title>Allan's BMI Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      max-width: 320px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0077cc;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    #result {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    
+ <section>
+    <p style="text-align:center; color:#555;">Quickly calculate your BMI to check if you're underweight, normal, overweight, or obese. Don't worry I'm Overweight too!</p>
+
+  <div class="container">
+    <h2>Allan's BMI Calculator</h2>
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height" placeholder="e.g. 170" />
+
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" placeholder="e.g. 65" />
+
+    <button onclick="calculateBMI()">Calculate</button>
+    <div id="result"></div>
+  </div>
+ </section>
+  <script>
+    function calculateBMI() {
+      const height = parseFloat(document.getElementById("height").value) / 100;
+      const weight = parseFloat(document.getElementById("weight").value);
+
+      if (!height || !weight) {
+        document.getElementById("result").textContent = "Please enter valid values.";
+        return;
+      }
+
+      const bmi = weight / (height * height);
+      let message = "";
+
+      if (bmi < 18.5) {
+        message = "Underweight";
+      } else if (bmi < 24.9) {
+        message = "Normal weight";
+      } else if (bmi < 29.9) {
+        message = "Overweight";
+      } else {
+        message = "Obese";
+      }
+
+      document.getElementById("result").textContent =
+        `Your BMI is ${bmi.toFixed(1)} (${message})`;
+    }
+  </script>
+
+</body>
+</html>
