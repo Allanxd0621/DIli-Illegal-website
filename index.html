@@ -95,21 +95,53 @@
         return;
       }
 
+       const bmi = weight / (height * height);
+    let category = "";
+    let message = "";
+
+    const funnyMessages = {
+      underweight: [
+        "Uy, baka tinatamad ka kumain?",
+        "Kahit rice is life, kulang ka pa!",
+        "Parang mas magaan ka pa sa feelings niya 😭"
+      ],
+      normal: [
+        "Yown, ang sarap mo! 😍",
+        "Balanced like your love life (hopefully).",
+        "Perfect ka na — wag ka lang magyabang!"
+      ],
+      overweight: [
+        "Konting bawas rice lang yan! 🍚",
+        "Masarap kumain noh? 😅",
+        "Baka naman stress eating ‘to?"
+      ],
+      obese: [
+        "Tara cardio na, laban! 🏃‍♂️",
+        "Love your body pero wag abusuhin!",
+        "Baka gusto mo ring bawasan softdrinks 😅"
+      ]
+    };
+
       const bmi = weight / (height * height);
       let message = "";
 
       if (bmi < 18.5) {
-        message = "Underweight";
+        message = getrandom(funnyMessage.Underweight);
       } else if (bmi < 24.9) {
-        message = "Normal weight";
+        message = getrandom(funnyMessage.Normal);
       } else if (bmi < 29.9) {
-        message = "Overweight";
+        message = getrandom(funnyMesssage.Overweight);
       } else {
-        message = "Obese";
+        message = getrandom(funnyMessage.Obese);
       }
 
-      document.getElementById("result").textContent =
-        `Your BMI is ${bmi.toFixed(1)} (${message})`;
+      document.getElementById("result").innerHTML =
+      `Your BMI is <strong>${bmi.toFixed(1)}</strong> (${category})<br><em>${message}</em>`;
+  }
+
+  function getRandom(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  
     }
   </script>
 
