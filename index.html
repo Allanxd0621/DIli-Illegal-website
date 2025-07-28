@@ -1,106 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title> BMI Calculator</title>
-  <meta name="description" content="This is a free Body mass index that uses kilogram and centimeters to calculate your BMI. Results will be in Tagalog and English."/>
-  <meta name="keywords" content="BMI Calculator,Free Body Mass Index, Allan BMI, Funny BMI, Health Tool, BMI Philippines"/>
-  <meta name="author" content="Allan Manalo" />
-  <style>
-    body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: rgb(213, 213, 213);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0%;
-}
-.container{
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: inset;
-    max-width: 360px;
-    width: 100%;
-}
+    <head>
+        <meta charset="UTF-8">
+        <meta content="viewport" content="width=device-width,initial-scale=1.0"/>
+        <title>secret</title>
+        <style>
+           header{
+                background-color: #6124ed;
+                color: white;
+                text-align: center;
+                padding: 1em 0;
+                font-size: larger;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #a082bd;
+            }
+            .container {
+                background-color: azure;
+                width: 80%;
+                margin: auto;
+                padding: 20px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                margin-top: 20px;
+            }
+            h1 {
+                color: #333;
+            }
+            p {
+                font-size: 16px;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+           }
+            
+        </style>
+    </head>
+    <body>
+        <header>MDC wifi</header>
+        <div class="container">
+            <H1>Mentors</H1>
+            <p>Good in Cast building and some outdoor facilities
+                <br>
+            Password:<b>M$D$C$Teachers25</b></p>
+            <img src="mentors.jpg" alt="mentors">
+        </div>
 
-label{
-    font: bold;
-}
-
-input{
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0 16px;
-    border-radius: 8px;
-    border-color: aqua;
-}
-
-button{
-    text-align: center;
-    width: 100%;
-    margin: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    padding: 10px;
-    border:none;
-    font-size: 16px;
-    color: white;
-    background-color: rgb(67, 243, 243);
-}
-    result{
-      font: bold:
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-    <h1>BMI Mater dei</h1>
-    <label for="height">Height (cm):</label>
-    <input type="number" id="height" placeholder="e.g. 170" />
-
-    <label for="weight">Weight (kg):</label>
-    <input type="number" id="weight" placeholder="e.g. 65" />
-
-    <button onclick="calculateBMI()">Calculate</button>
-    <div id="result"></div>
-  </div>
-
-  <script>
-    function calculateBMI() {
-      const height = parseFloat(document.getElementById("height").value) / 100;
-      const weight = parseFloat(document.getElementById("weight").value);
-
-      if (!height || !weight) {
-        document.getElementById("result").textContent = "Please enter valid values.";
-        return;
-      }
-
-      const bmi = weight / (height * height);
-      let status = "";
-      let funnyMessage = "";
-
-      if (bmi < 18.5) {
-        status = "Underweight";
-        funnyMessage = "– galit kaba sa electric fan na naka number 3?";
-      } else if (bmi < 24.9) {
-        status = "Normal weight";
-        funnyMessage = "– yown ang sarap mo!😍";
-      } else if (bmi < 29.9) {
-        status = "Overweight";
-        funnyMessage = "– hinay2 sa rice bro😅";
-      } else {
-        status = "Obese";
-        funnyMessage = "– Diyos ko Lord!";
-      }
-
-      document.getElementById("result").textContent =
-        `Your BMI is ${bmi.toFixed(1)} (${status}) ${funnyMessage}`;
-    }
-  </script>
-
-</body>
+        <div class="container">
+            <h1>TP-Link_F518</h1>
+            <p>Good in Lab1/lab2 computer
+                <br>
+                Password:<b>42218050</b>
+            </p>
+             <img src="tplink.jpg" alt="tplink">
+        </div>
+        <footer>
+            DILI tANAN GWAPO TAWO 
+        </footer>
+    </body>
 </html>
