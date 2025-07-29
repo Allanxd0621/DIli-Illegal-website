@@ -1,64 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta content="viewport" content="width=device-width,initial-scale=1.0"/>
-        <title>secret</title>
-        <style>
-           header{
-                background-color: #6124ed;
-                color: white;
-                text-align: center;
-                padding: 1em 0;
-                font-size: larger;
-            }
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #a082bd;
-            }
-            .container {
-                background-color: azure;
-                width: 80%;
-                margin: auto;
-                padding: 20px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-                margin-top: 20px;
-            }
-            h1 {
-                color: #333;
-            }
-            p {
-                font-size: 16px;
-            }
-            img {
-                max-width: 100%;
-                height: auto;
-           }
-            
-        </style>
-    </head>
-    <body>
-        <header>MDC wifi</header>
-        <div class="container">
-            <H1>Mentors</H1>
-            <p>Good in Cast building and some outdoor facilities
-                <br>
-            Password:<b>M$D$C$Teachers25</b></p>
-            <img src="mentors.jpg" alt="mentors">
-        </div>
-
-        <div class="container">
-            <h1>TP-Link_F518</h1>
-            <p>Good in Lab1/lab2 computer
-                <br>
-                Password:<b>42218050</b>
-            </p>
-             <img src="tplink.jpg" alt="tplink">
-        </div>
-        <footer>
-            DILI tANAN GWAPO TAWO 
-        </footer>
-    </body>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Allandino Manalo"/>
+    <meta name="description" content="This is a free BMI calculator to determine your body mass index using kilogram and centimeters"/>
+    <meta name="keywords" content="Free BMI calculator, Body mass Index, "/>
+    <link rel="stylesheet" href="bmi.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Allan's BMI calculator</h1>
+      <label for="Weight">Weight</label>
+      <input type="number" id="Weight" placeholder="enter weight (kg)"/>
+      <br>
+      <label for="height">Height</label>
+      <input type="number" id="height" placeholder="enter height (cm)"/>
+      <button>Calculate</button>
+      <div id="result"></div>
+    </div>
+  </body>
 </html>
